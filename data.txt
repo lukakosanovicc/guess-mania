@@ -1,0 +1,5 @@
+Beograd|Srbija|1_378_682|360|
+Pariz|Francuska|2_140_526|105|
+Berlin|Nemačka|3_769_000|891|
+Madrid|Španija|3_223_000|604|
+Rim|Italija|2_873_000|1285|
