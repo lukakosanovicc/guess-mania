@@ -7,7 +7,7 @@ class Grad:
         self.populacija = int(populacija)
         self.povrsina = int(povrsina) # int cisto radi lakseg pogadjanja
 
-def Ucitaj(ime_fajla: str):
+def Ucitaj(ime_fajla: str) -> List[Grad]:
     gradovi = []
     try:
         with open(ime_fajla, "r") as fajl:
@@ -22,12 +22,12 @@ def Ucitaj(ime_fajla: str):
         print(f"Greska: fajl '{ime_fajla}' nije pronadjen.")
     return gradovi
 
-def Proveri(tacna_vrednost, pokusaj, tolerancija=0.15): # tolerancija se moze menjati
+def Proveri(tacna_vrednost, pokusaj, tolerancija=0.15) -> bool: # tolerancija se moze menjati
     donja_granica = tacna_vrednost * (1 - tolerancija)
     gornja_granica = tacna_vrednost * (1 + tolerancija)
     return donja_granica <= pokusaj <= gornja_granica
 
-def Igraj():
+def Igraj() -> None:
     if not gradovi:
         print("--> Nema dostupnih podataka za igru.")
         return
