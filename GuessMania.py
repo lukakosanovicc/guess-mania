@@ -22,7 +22,7 @@ def Ucitaj(ime_fajla: str) -> List[Grad]:
         print(f"Greska: fajl '{ime_fajla}' nije pronadjen.")
     return gradovi
 
-def Proveri(tacna_vrednost, pokusaj, tolerancija=0.15) -> bool: # tolerancija se moze menjati
+def Proveri(tacna_vrednost: int, pokusaj: int, tolerancija: float=0.15) -> bool: # tolerancija se moze menjati
     donja_granica = tacna_vrednost * (1 - tolerancija)
     gornja_granica = tacna_vrednost * (1 + tolerancija)
     return donja_granica <= pokusaj <= gornja_granica
@@ -41,7 +41,7 @@ def Igraj() -> None:
         print("Šta zelite da pogadjate?")
         print("\n1. Populaciju")
         print("2. Povrsinu")
-        izbor = input("\nUnesite 1 ili 2: ").strip()
+        izbor: int = input("\nUnesite 1 ili 2: ").strip()
 
         if izbor not in ["1", "2"]:
             print("--> Nevazeci izbor. Kraj igre.")
