@@ -70,3 +70,4 @@ def Igraj() -> None:
 if __name__ == "__main__":
     gradovi = Ucitaj("data.txt")
     Igraj()
+
